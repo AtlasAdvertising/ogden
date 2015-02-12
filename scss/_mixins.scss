@@ -1,0 +1,97 @@
+/* Mixins */
+
+@mixin link-hover {
+	color: $red;
+	&:hover {
+		color: $green;
+		text-decoration: none;
+	}
+}
+
+@mixin button($text,$color,$hover,$border-radius) {
+	background: $color;
+	border-radius: $border-radius;
+	border: 0;
+	color: $text;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	&:hover {
+		background: $hover;
+		text-decoration: none;
+	}	
+}
+
+@mixin list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin nav-hover($nav-color) {
+		border-top: 4px solid $nav-color;
+	ul a:hover {
+		background: $nav-color;
+		color: #fff;
+		font-weight: 700;
+	}
+}
+
+@mixin grow-shadow {
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+	&:hover, 
+	&:focus, 
+	&:active {
+	  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+	  -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
+}
+
+
+/* Placeholders */
+
+%input {
+	background: #ccc;
+	border: none;
+	outline: 0;
+	padding: 6px 10px;
+}
+
+%header {
+	border-top: 4px solid $black;
+	display: inline-block;
+	font-family:'Helvetica W01';
+	font-weight: 700;
+	font-size: 25px;
+	padding: 4px 0 0;
+	line-height: 1;
+	color: $grey;
+}
+
+
+/* Breakpoint Mixins */
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px) { @content; }
+  }
+}

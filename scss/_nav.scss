@@ -1,0 +1,155 @@
+/* Nav */
+
+
+// Logo
+
+#logo img {
+	padding-top: 8px;
+}
+
+
+// Header
+
+header {
+	background: $blue;
+	height: 50px;
+}
+
+
+// Utility Nav
+
+#utility-nav-wrapper {
+	font-family: "Neue Helvetica W01";
+	text-align: right;
+	a {
+		color: $light-grey;
+	}
+}
+
+#utilityNav {
+	padding-top: 4px;
+}
+
+#utilityNav,
+#socialMedia,
+#utilityNav li,
+#socialMedia li,
+ {
+	display: inline-block;
+}
+
+#socialMedia {
+	font-size: 20px;
+	padding-top: 5px;
+}
+
+
+// Mobile Menu
+
+.MobileMenuWrapper,
+.MobileMenu {
+	display: none;
+}
+
+
+// Main Nav
+
+nav {
+	align-items: flex-end;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	font-size: 14px;
+	height: 80px;
+	justify-content: flex-end;
+	position: relative;
+	z-index: 1005;
+	@include breakpoint(large) {
+		font-size: 15px;
+	}
+	ul {
+		@include list;
+	}
+	#menuElem {
+		align-items: flex-end;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		margin-right: 45px;
+		width: 100%;
+		@include breakpoint(large) {
+		}
+		> li { 
+			flex-grow: 1;
+			float: none;
+			margin: 0 8px 0 0;
+			padding: 5px 15px 5px 0;
+			position: relative;
+			@include breakpoint(large) {
+				margin: 0 9px 0 0;
+			}
+			> a:after {
+				color: #fff;
+				content: "\f078";
+				font-family: 'FontAwesome';
+				font-size: 8px;
+				position: absolute;
+				right: -15px;
+				top: 5px;
+			}
+			&:nth-last-child(1) ul {
+				right: 0;
+			}
+			a {
+				// @include link-hover;
+				// color: #fff;
+				// @include breakpoint(large) {
+				// 	padding: 10px 20px;
+				// }
+			}
+			ul {
+				background: #fff;
+				border-bottom: 4px solid #000;
+				display: none;
+				position: absolute;
+				top: 100%;
+				width: 240px;
+				li {
+					border: none;
+					position: relative;
+					width: 100%;
+					&:hover {
+						ul {
+							display: block;
+						}
+					}
+					ul {
+						border: none;
+						position: absolute;
+						left: 100%;
+						top: 0;
+					}
+					a {
+						color: #000;
+						display: inline-block;
+						padding: 5px 10px;
+						width: 100%;
+						&:hover {
+							background: #fff;
+							color: $grey;
+						}
+					}
+				}
+			}
+		}
+		> li > a {
+			max-width: 130px;
+			text-align: center;
+			position: relative;
+		}
+	}
+}
