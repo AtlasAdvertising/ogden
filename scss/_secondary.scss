@@ -1,0 +1,145 @@
+/* Secondary */
+
+#secondaryWrapper {
+	box-shadow: 0px 1px 4px #585858;
+	min-height: 0;
+	padding: 25px 0;
+}
+
+#secondaryContent {
+	background: #264856;
+}
+
+#secondaryMainContent {
+	min-height: 600px;
+}
+
+#secondary-content-widgets-wrapper {
+	background: #fff;
+	overflow: hidden;
+}
+
+#sideNavigation {
+	background: $header-blue;
+	color: $white;
+	padding: 0;
+	a {
+		color: $white;
+	}
+	.SectionHeaderRepeater {
+		color: #fff;
+		font-family: 'RamaGothicE-Regular';
+		font-size: 28px;
+		font-weight: 600;
+		padding: 5px 15px;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			a {
+				color: #fff;
+				display: inline-block;
+				font-family:'Neue Helvetica W01';
+				font-size: 11px;
+				font-weight: 600;
+				padding: 2px 15px;
+				width: 100%;
+				&:hover {
+					background: #fff;
+					color: $header-blue;
+				}
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
+	li.HighLighted a {
+		background: #fff;
+		color: #264856;
+	}
+	li.HighLighted ul {
+		display: block;
+		margin-left: 15px;
+		a {
+			background: none;
+			color: #fff;
+		}
+	}
+}
+
+
+// Headers
+
+h1 {
+  font-family: 'RamaGothicE-Regular';
+  font-size: 42px;
+  font-weight: 600;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family:'Neue Helvetica W01';
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+
+
+// My Fav's
+
+.PageUtility {
+	position: absolute !important;
+	right: -40px;
+	top: 22px;
+	.PageUtility_Wrapper {
+		width: 300px;
+	}
+	#Utility_MyFavorites, 
+	#Utility_AddPage, 
+	#Utility_Print,
+	#Utility_Share {
+		border: none !important;
+		color: #666;
+		font-family:'Neue Helvetica W01';
+		padding: 7px 2px 8px 1px;
+		&:hover {
+			color: $black;
+		}
+		&:after {
+			content: "::";
+			padding: 0 5px;
+		}
+		.ImgBg {
+			visibility: hidden;
+		}
+		a {
+			color: #666;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	#Utility_Share:after {
+		content: "";
+	}
+	.PageUtility_Dropdown { 
+		-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+		-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+		box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+	}
+}

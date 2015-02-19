@@ -1,0 +1,29 @@
+/* News */
+
+ul.news-list {
+	list-style: none;
+	padding: 0;
+	.news-item {
+		margin-bottom: 25px;
+	}
+	.date {
+		font-size: 11px;
+	}
+	.title {
+		font-size: 15px;
+		font-weight: 600;
+	}
+	.description {
+		font-size: 13px;
+	}
+}
+
+
+// News Page Header 
+
+.news-page-header {
+	font-family: 'RamaGothicE-Regular';
+	font-size: 28px;
+	font-weight: 600;
+	padding: 0 0 25px;	
+}

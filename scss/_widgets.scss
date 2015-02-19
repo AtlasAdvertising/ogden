@@ -1,0 +1,189 @@
+/* Widgets */
+
+
+#sideWidgets {
+	background: #EEF1F2;
+	border-radius: 10px;
+	margin-top: 65px;
+	padding-bottom: 25px;
+	padding-top: 10px;
+	img {
+		max-width: 100%;
+	}
+}
+
+.events-widget,
+.widget-block {
+	position: relative;
+}
+
+
+// Widget Titles
+
+#sideWidgets {
+	.widget-title,
+	.twitter-wrapper h2 {
+		border-top: 3px solid $black;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+}
+
+.widget-block {
+	.widget-title {
+		a {
+			display: block;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			color: $black;
+			&:hover {
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+	}
+	h2 {
+		border-top: 3px solid $black;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+}
+
+
+// Widget Content
+
+#sideWidgets {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul.LinksList {
+		li {
+			&:before {
+				content: "\f0da";
+				font-family: FontAwesome;
+				color: $black;
+				padding-right: 5px;
+			}
+			a {
+				font-family: 'Roboto', sans-serif;
+				color: $blue;
+				font-size: 12px;
+				&:hover {
+					color: $blue;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+		
+	.ConnectWithUs {
+		.Staff {
+			font-family: 'Roboto', sans-serif;
+			.Controls {
+				.button {
+					background: $grey;
+				}
+			}
+			.FirstName,
+			.LastName {
+				display: inline;
+			}
+			.FirstName,
+			.LastName,
+			.Title {
+				color: $black;
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+	}
+	
+	#Sidebar_Downloads {
+		.SidebarTitle {
+			border-top: 3px solid $black;
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		.SidebarText {
+			display: none;
+		}
+		.SidebarList {
+			ul {
+				li {
+					.SidebarListMyFavorites {
+						position: relative;
+						top: -7px;
+						cursor: pointer;
+					}
+					a {
+						font-family: Arial, sans-serif;
+						font-size: 11px;
+						color: #333333;
+						&:hover {
+							color: $blue;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// View All Links
+.widget-title a,
+.view-all-link {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+  position: absolute;
+  right: 15px;
+  top: 18px;
+}
+
+
+// News
+
+#sideWidgets {
+	ul.news-list:before {
+		border-top: 3px solid $black;
+		content: "News";
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	li.news-item {
+
+	}
+}
+
+
+// Connect With Us: Arrows
+.ConnectWithUs {
+	@include breakpoint(medium) {
+		.Staff .Controls .button {
+			height: 25px;
+			width: 25px;
+			.triangle {
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+			}
+			.triangle.left {
+				border-right: 5px solid #ffffff;
+				margin: 8px 11px 0 0;
+			}
+			.triangle.right {
+				border-left: 5px solid #ffffff;
+				margin: 8px 0 0 11px;
+			}
+		}
+	}
+}

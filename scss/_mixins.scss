@@ -1,5 +1,9 @@
 /* Mixins */
 
+@mixin blue-gradient {
+	background: linear-gradient(to bottom, rgba(52,93,110,1) 0%, rgba(15,57,74,1) 100%);
+}
+
 @mixin link-hover {
 	color: $red;
 	&:hover {

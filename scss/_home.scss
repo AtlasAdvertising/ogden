@@ -1,0 +1,116 @@
+/* Home Page */
+
+
+// Headers
+
+.homeWrapper {
+	.smart-city-header {
+		background: rgba(255,255,255,0.8);
+		padding: 10px 15px;
+		.editable-text {
+			background: transparent;
+			color: $header-blue;
+			display: inline-block;
+			font-family: 'RamaGothicE-Regular';
+			font-size: 28px;
+			font-weight: 600;
+			padding: 0;
+		}
+	}
+}
+
+
+// Page Wrapper 
+
+.homeWrapper {
+	position: relative;
+	padding: 0;
+}
+
+
+// Three Widget Area 
+
+.columnOuterWrapper {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.homeWrapper {
+	ul.news-list,
+	.editable-text {
+		background: $black;
+		color: #fff;
+		display: none;
+		font-size: 12px;
+		padding: 20px 15px;
+	}
+}
+
+.learn-more {
+	display: none !important;
+}
+
+
+.editable-text {
+}
+
+
+// Web Part Hover
+
+.columnOuterWrapper .col-md-4:hover ul.news-list, 
+.columnOuterWrapper .col-md-4:hover .editable-text, 
+.columnOuterWrapper .col-md-4:hover .learn-more {
+	display: block !important;
+}
+
+
+// View All Links
+
+a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l2_Link_SmartCity1_btnElem_hyperLink {
+	position: absolute;
+	right: 35px;
+	top: 20px;
+}
+
+a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+	@include blue-gradient;
+	color: #fff;
+	display: block;
+	padding: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+
+// News Widget
+.homeWrapper {
+.news-item {
+	a.link {
+		display: none;
+	}
+}
+
+ul.news-list {
+	padding: 0;
+	.mCSB_container {
+		padding: 0;
+	}
+	li {
+		padding: 20px 15px;
+		margin: 0;
+	}
+	li:nth-child(2) {
+		@include blue-gradient;
+	}
+	li:nth-child(n+3) {
+		display: none;
+	}
+	.title {
+		font-size: 13px;
+		font-weight: normal;
+	}
+}
+
+}
