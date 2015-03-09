@@ -4,18 +4,33 @@
 
 #connect-footer-wrapper {
 	background: $black;
-	height: 80px;
 	padding: 17px 0;
+	text-align: center;
+	@include breakpoint(medium) {
+		height: 80px;
+		text-align: left;
+	}
 	#connect-footer-header {
 		color: $white;
 		display: inline-block;
 		font-family: 'RamaGothicE-Regular';
 		font-size: 33px;
+		&:before {
+			content: "\f0da";
+			font-family: 'FontAwesome';
+			padding-right: 15px;
+		}
 	}
 	.social-media {
-		float: right;
+		@include breakpoint(medium) {
+			float: right;
+		}
 		a {
 			color: $light-grey;
+			&:hover {
+				background: transparent;
+				color: #fff;
+			}
 		}
 	}
 }
@@ -29,9 +44,11 @@
 	height: 135px;
 	padding: 25px 0;
 	#footer-top-inner-wrapper {
-		align-items: center;
-		display: flex;
-		height: 76px;
+		@include breakpoint(medium) {
+			align-items: center;
+			display: flex;
+			height: 76px;
+		}
 	}
 }
 
@@ -44,8 +61,12 @@ footer #footer-top {
 	font-family:'Neue Helvetica W01';
 	.OfficeName,
 	.OfficePhone {
+		font-family: 'Neue Helvetica W01';
 		font-size: 14px;
 		font-weight: 600;
+	}
+	.OfficeName {
+		padding-bottom: 5px;
 	}
 	.OfficeAddress,
 	.OfficeEmail {
@@ -98,7 +119,9 @@ footer #footer-top {
 	color: $black;
 	font-family:'Neue Helvetica W01';
 	font-size: 13px;
-	text-align: right;
+	@include breakpoint(medium) {
+		text-align: right;
+	}
 	a {
 	color: $black;
 		&:hover {
@@ -123,6 +146,9 @@ footer #footer-top {
 
 #sitemap {
 	margin: 45px 0 30px;
+	.CMSSiteMapList .CMSSiteMapListItem .CMSSiteMapList {
+		display: block;
+	}
 	ul {
 		list-style: none; 
 		margin: 0 auto; 

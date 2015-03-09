@@ -4,17 +4,29 @@
 // Headers
 
 .homeWrapper {
+	background: $white;
+	height: 1200px;
+	@include breakpoint(medium) {
+		height: auto;
+	}
 	.smart-city-header {
-		background: rgba(255,255,255,0.8);
+		background: rgba(221,221,221,0.8);
 		padding: 10px 15px;
+		width: 100%;
+		@include breakpoint(medium) {
+			background: rgba(255,255,255,0.8);
+		}
 		.editable-text {
 			background: transparent;
-			color: $header-blue;
+			color: $header-blue !important;
 			display: inline-block;
 			font-family: 'RamaGothicE-Regular';
 			font-size: 28px;
 			font-weight: 600;
 			padding: 0;
+			&:hover {
+				color: $header-blue;
+			}
 		}
 	}
 }
@@ -31,9 +43,31 @@
 // Three Widget Area 
 
 .columnOuterWrapper {
-	bottom: 0;
 	position: absolute;
+	top: 150px;
 	width: 100%;
+	@include breakpoint(medium) {
+		bottom: 35px;
+		top: auto;
+	}
+	.row {
+		@include breakpoint(medium) {
+			align-items: flex-end;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+		}
+	}
+	.col-md-4 {
+		margin-bottom: 45px;
+		@include breakpoint(medium) {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+		}
+	}
 }
 
 .homeWrapper {
@@ -41,14 +75,31 @@
 	.editable-text {
 		background: $black;
 		color: #fff;
-		display: none;
 		font-size: 12px;
 		padding: 20px 15px;
+		a {
+			color: #fff;
+			&:hover {
+				color: #fff;
+			}
+		}
+		@include breakpoint(medium) {
+			display: none;
+		}
+	}
+	ul.news-list {
+		margin: 0;
 	}
 }
 
-.learn-more {
-	display: none !important;
+a.learn-more {
+	color: $blue;
+	&:hover {
+		color: #000;
+	}
+	@include breakpoint(medium) {
+		display: none !important;
+	}
 }
 
 
@@ -60,8 +111,11 @@
 
 .columnOuterWrapper .col-md-4:hover ul.news-list, 
 .columnOuterWrapper .col-md-4:hover .editable-text, 
-.columnOuterWrapper .col-md-4:hover .learn-more {
-	display: block !important;
+.columnOuterWrapper .col-md-4:hover .learn-more,
+.columnOuterWrapper .col-md-4:hover .teaser-wrapper {
+	@include breakpoint(medium) {
+		display: block !important;
+	}
 }
 
 
@@ -113,4 +167,33 @@ ul.news-list {
 	}
 }
 
+}
+
+
+// Industries Widget
+
+.teaser-wrapper {
+	background: #2B2B2D;
+	border-bottom: dashed 2px $grey;
+	display: inline-block;
+	padding: 10px 15px;
+	width: 100%;
+	@include breakpoint(medium) {
+		display: none;
+	}
+	.image {
+		float: left;
+	}
+	.title {
+		color: #fff;
+		float: left;
+		line-height: 27px;
+		margin-left: 20px;
+	}
+	&:last-child {
+		border: none;
+	}
+	&:hover {
+		@include blue-gradient;
+	}
 }

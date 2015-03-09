@@ -9,6 +9,12 @@
 	padding-top: 10px;
 	img {
 		max-width: 100%;
+	} 
+	a {
+		color: $blue;
+		&:hover {
+			color: $blue-hover;
+		}
 	}
 }
 
@@ -35,8 +41,10 @@
 		a {
 			display: block;
 			font-family: Arial, sans-serif;
-			font-size: 14px;
+			font-size: 12px;
 			color: $black;
+			right: 0;
+			top: 6px;
 			&:hover {
 				color: $blue;
 				text-decoration: none;
@@ -73,7 +81,7 @@
 				color: $blue;
 				font-size: 12px;
 				&:hover {
-					color: $blue;
+					color: $blue-hover;
 					text-decoration: none;
 				}
 			}
@@ -126,7 +134,7 @@
 						font-size: 11px;
 						color: #333333;
 						&:hover {
-							color: $blue;
+							color: $blue-hover;
 							text-decoration: none;
 						}
 					}
@@ -185,5 +193,8 @@
 				margin: 8px 0 0 11px;
 			}
 		}
+	}
+	.Staff .Title {
+		font-weight: 400 !important;
 	}
 }

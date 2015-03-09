@@ -1,0 +1,29 @@
+/* Contact Page */
+
+
+// Contact Form
+
+#secondaryWrapper #contactContent #contactFormWrapper .FormButton {
+	border-radius: 2px;
+	border: none;
+	color: $blue;
+	font-family: 'RamaGothicE-Regular';
+	font-size: 19px;
+	font-weight: 600;
+	margin-left: 3%;
+	padding: 2px 0;
+	width: 100%;
+}
+
+
+// Contact Content
+
+#contactMainContent {
+	padding-top: 35px;
+}
+
+.OfficeName {
+	font-family: 'RamaGothicE-Regular';
+	font-size: 32px;
+	padding-bottom: 15px;
+}

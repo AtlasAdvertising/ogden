@@ -96,7 +96,7 @@ gulp.task('ftp-all', ['ftp-dev-css', 'ftp-dev-scss', 'ftp-dev-scripts', 'ftp-css
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch('scss/*.scss', ['sass']);
-  gulp.watch('css/*.css', ['ftp-dev-css']);
+  gulp.watch('css/*.css', ['ftp-dev-css', 'ftp-css']);
   gulp.watch('scripts/*.js', ['scripts']);
   gulp.watch('js/*.js', ['ftp-dev-sripts'])
 });

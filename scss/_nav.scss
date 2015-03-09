@@ -24,16 +24,39 @@ header {
 	text-align: right;
 	a {
 		color: $light-grey;
+		display: inline-block;
 		padding: 10px 5px;
+		&:hover {
+			background: transparent;
+			color: #fff;
+		}
+	}
+	#headerPhoneNum {
+		clear: none;
+		color: $light-grey;
+		display: inline-block;
+		float: none;
+		font-weight: bold;
+	}
+	.OfficePhone {
+		display: inline-block;
+		margin-left: 25px;
+		padding-top: 13px;
 	}
 }
 
 .fa-search {
 	color: $light-grey;
+	cursor: pointer;
+	&:hover {
+		color: #fff;
+	}
 }
+
 
 #utilityNav {
 	padding-top: 4px;
+	vertical-align: top;
 }
 
 #utilityNav,
@@ -42,6 +65,7 @@ header {
 .social-media li,
  {
 	display: inline-block;
+	float: none;
 }
 
 .social-media {
@@ -173,4 +197,55 @@ nav {
 
 #main-navigation.secondary {
 	position: static;
+}
+
+
+// Mobile Menu and Button
+
+body {
+.MobileMenu {
+		.MobileMenuPlaceholder {
+			display: none;
+		}
+		.MobileMenuButton {
+			top: 12px; 
+			right: 5px;
+			background: none; 
+			font-size: 36px; 
+			height: auto; 
+			width: auto; 
+			padding: 5px 10px; 
+			&:before {
+				content: "\f0c9";
+				font-family: "FontAwesome";
+				color: $black;
+				font-size: 28px;
+			}
+			@include breakpoint(small) {
+				top: 15px; 
+				right: 50px;
+			}
+			@include breakpoint(medium) {
+				display: none;
+			}
+		}
+	}
+	.MobileMenuWrapper {
+		#searchbtn-mobile {
+			height: 28px;
+		}
+		.mobile-list {
+			margin: 0; 
+			padding: 10px 0 0 0; 
+			list-style: none; 
+			border-top: 1px solid rgba(0,0,0,0.25);
+			li {
+				display: inline-block; 
+				padding: 5px;
+				a {
+					padding: 5px;
+				}
+			}
+		}
+	}
 }
