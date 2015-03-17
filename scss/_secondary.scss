@@ -3,7 +3,8 @@
 #secondaryWrapper {
 	box-shadow: 0px 1px 4px #585858;
 	min-height: 0;
-	padding: 25px 0;
+	padding: 25px 0 0;
+	position: relative;
 	a {
 		color: $link-blue;
 		&:hover {
@@ -12,8 +13,40 @@
 	}
 }
 
+#secondaryHeaderImage {
+	width: 100%;
+	img {
+    width: 100%;
+	}
+}
+
+#secondaryWrapper:before {
+  content: " ";
+  height: 100%;
+  background: #264856;
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 500px;
+  @include breakpoint(large) {
+	  width: 1000px;
+	}
+}
+
+
+
+.with-header-image + div#secondaryWrapper {
+  padding-top: 0;
+}
+
+.with-header-image {
+	#menuElem li.HighLighted>a {
+		bottom: auto;
+		border: none;
+	}
+}
+
 #secondaryContent {
-	background: #264856;
 }
 
 #secondaryMainContent {
@@ -28,7 +61,7 @@
 #sideNavigation {
 	background: $header-blue;
 	color: $white;
-	padding: 0;
+	padding-top: 25px;
 	a {
 		color: $white;
 	}
@@ -133,6 +166,7 @@ h6 {
 		padding: 7px 2px 8px 1px;
 		&:hover {
 			color: $black;
+			text-decoration: none;
 		}
 		&:after {
 			content: "::";
@@ -145,6 +179,7 @@ h6 {
 			color: #666;
 			&:hover {
 				color: $black;
+				text-decoration: none;
 			}
 		}
 	}

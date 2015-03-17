@@ -25,7 +25,8 @@ header {
 	a {
 		color: $light-grey;
 		display: inline-block;
-		padding: 10px 5px;
+		font-size: 13px;
+		padding: 10px;
 		&:hover {
 			background: transparent;
 			color: #fff;
@@ -37,22 +38,30 @@ header {
 		display: inline-block;
 		float: none;
 		font-weight: bold;
+		a {
+			font-size: 20px;
+			padding: 10px 5px 10px 10px;
+		}
 	}
 	.OfficePhone {
 		display: inline-block;
-		margin-left: 25px;
+		margin-left: 10px;
 		padding-top: 13px;
 	}
 }
 
-.fa-search {
-	color: $light-grey;
-	cursor: pointer;
-	&:hover {
-		color: #fff;
+#utility-nav-wrapper {
+	.fa-search {
+		color: $light-grey;
+		cursor: pointer;
+	  font-size: 20px !important;
+	  position: relative;
+	  top: 1px;
+		&:hover {
+			color: #fff;
+		}
 	}
 }
-
 
 #utilityNav {
 	padding-top: 4px;
@@ -72,19 +81,18 @@ header {
 	font-size: 20px;
 	padding: 5px 0 0 25px;
 	padding-top: 5px;
-	padding-left: 25px;
+	padding-left: 0;
+	li:first-child {
+		padding-left: 0;
+	}
+	li:nth-child(2) a i:before {
+		content: "\f16e";
+	}
 }
 
 #utility-nav-wrapper .social-media a {
-	padding-top: 0;
-}
-
-
-// Mobile Menu
-
-.MobileMenuWrapper,
-.MobileMenu {
-	display: none;
+	font-size: 20px;
+	padding: 0 5px 10px;
 }
 
 
@@ -107,6 +115,10 @@ nav {
 	z-index: 1005;
 	@include breakpoint(large) {
 		font-size: 15px;
+	}
+	@media (min-width: 1650px) {
+		margin: 10px 15% 0;
+		width: 70%;
 	}
 	ul {
 		@include list;
@@ -189,6 +201,15 @@ nav {
 			position: relative;
 			text-align: center;
 		}
+		> li.HighLighted > a {
+		  background: #fff;
+		  padding-left: 20px;
+		  padding-right: 20px;
+		  z-index: 100;
+	    bottom: -1px;
+      border: 2px solid #EEE;
+      border-bottom: none;
+		}
 	}
 }
 
@@ -208,7 +229,7 @@ body {
 			display: none;
 		}
 		.MobileMenuButton {
-			top: 12px; 
+			top: 2px; 
 			right: 5px;
 			background: none; 
 			font-size: 36px; 
@@ -218,12 +239,11 @@ body {
 			&:before {
 				content: "\f0c9";
 				font-family: "FontAwesome";
-				color: $black;
+				color: $white;
 				font-size: 28px;
 			}
 			@include breakpoint(small) {
-				top: 15px; 
-				right: 50px;
+
 			}
 			@include breakpoint(medium) {
 				display: none;

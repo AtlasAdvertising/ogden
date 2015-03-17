@@ -15,15 +15,16 @@
 		width: 100%;
 		@include breakpoint(medium) {
 			background: rgba(255,255,255,0.8);
+			height: 60px;
 		}
 		.editable-text {
 			background: transparent;
 			color: $header-blue !important;
 			display: inline-block;
 			font-family: 'RamaGothicE-Regular';
-			font-size: 28px;
+			font-size: 28px !important;
 			font-weight: 600;
-			padding: 0;
+			padding: 0 !important;
 			&:hover {
 				color: $header-blue;
 			}
@@ -66,9 +67,57 @@
 			display: flex;
 			flex-direction: column;
 			margin-bottom: 0;
+			height: 60px;
+			overflow: hidden;
+			transition: height 0.5s, margin 0.5s;
+			&:hover {
+				@include breakpoint(medium) {					
+					height: 320px;
+				}
+				@include breakpoint(large) {
+					height: 278px;
+				}
+				a span {
+					font-size: 14px;
+				}
+			}
+		}
+		&:first-child:hover {
+			.editable-text {
+				@include breakpoint(medium) {
+					font-size: 12px;
+					padding: 20px 15px;
+					height: 210px;
+				}
+				@include breakpoint(large) {
+					height: 168px;
+				}
+			}
+			a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+				height: 50px;
+			}
+		}
+		a.learn-more,
+		a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+			color: $white;
+			font-size: 0;
+			line-height: 50px;
+			transition: height 0.5s;
+			span {
+				transition: font-size 0.5s;
+			}
+			&:hover {
+				color: #000;
+			}
+			@include breakpoint(medium) {
+				height: 0;
+				padding: 0;
+				transition: height 0.5s;
+			}
 		}
 	}
 }
+
 
 .homeWrapper {
 	ul.news-list,
@@ -76,7 +125,7 @@
 		background: $black;
 		color: #fff;
 		font-size: 12px;
-		padding: 20px 15px;
+		padding: 0;
 		a {
 			color: #fff;
 			&:hover {
@@ -84,7 +133,9 @@
 			}
 		}
 		@include breakpoint(medium) {
-			display: none;
+			font-size: 0;
+			height: 0;
+			transition: height 0.5s, padding 0.5s;
 		}
 	}
 	ul.news-list {
@@ -92,15 +143,7 @@
 	}
 }
 
-a.learn-more {
-	color: $blue;
-	&:hover {
-		color: #000;
-	}
-	@include breakpoint(medium) {
-		display: none !important;
-	}
-}
+
 
 
 .editable-text {
@@ -109,12 +152,19 @@ a.learn-more {
 
 // Web Part Hover
 
-.columnOuterWrapper .col-md-4:hover ul.news-list, 
 .columnOuterWrapper .col-md-4:hover .editable-text, 
 .columnOuterWrapper .col-md-4:hover .learn-more,
 .columnOuterWrapper .col-md-4:hover .teaser-wrapper {
 	@include breakpoint(medium) {
 		display: block !important;
+	}
+}
+
+.columnOuterWrapper .col-md-4:hover ul.news-list {
+	display: block !important;
+	height: 260px;
+	@include breakpoint(large) {
+		height: 218px;
 	}
 }
 
