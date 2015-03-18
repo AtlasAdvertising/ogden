@@ -14,13 +14,14 @@
 }
 
 #secondaryHeaderImage {
+	position: relative;
 	width: 100%;
 	img {
     width: 100%;
 	}
 }
 
-#secondaryWrapper:before {
+#secondaryWrapper:not(.no-side-nav):before {
   content: " ";
   height: 100%;
   background: #264856;

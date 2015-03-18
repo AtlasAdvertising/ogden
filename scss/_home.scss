@@ -38,6 +38,7 @@
 .homeWrapper {
 	position: relative;
 	padding: 0;
+	width: 100%;
 }
 
 
@@ -172,9 +173,10 @@
 // View All Links
 
 a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l2_Link_SmartCity1_btnElem_hyperLink {
+	color: $black;
 	position: absolute;
 	right: 35px;
-	top: 20px;
+	top: 5px;
 }
 
 a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
