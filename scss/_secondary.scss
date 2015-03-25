@@ -22,13 +22,15 @@
 }
 
 #secondaryWrapper:not(.no-side-nav):before {
-  content: " ";
-  height: 100%;
-  background: #264856;
-  position: absolute;
-  left: 0;
-  top: 26px;
-  width: 500px;
+	@include breakpoint(medium) {
+	  content: " ";
+	  height: 100%;
+	  background: #264856;
+	  position: absolute;
+	  left: 0;
+	  top: 26px;
+	  width: 500px;
+	}
   @include breakpoint(large) {
 	  width: 1000px;
 	}
@@ -52,6 +54,7 @@
 
 #secondaryMainContent {
 	min-height: 600px;
+	padding-top: 45px;
 }
 
 #secondary-content-widgets-wrapper {
@@ -106,6 +109,9 @@
 		a {
 			background: none;
 			color: #fff;
+			&:hover {
+				color: $light-grey;
+			}
 		}
 	}
 	li.HighLighted li.HighLighted:before {

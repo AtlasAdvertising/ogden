@@ -8,12 +8,13 @@ var ftp = require('gulp-ftp');
 var sass = require('gulp-ruby-sass');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Compile Sass
 gulp.task('sass', function() {
-  return gulp.src('scss/main.scss')
+  return sass('scss/main.scss', { sourcemap: true })
     .pipe(rename({suffix: '.min'}))
-    .pipe(sass({style: 'compressed'}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('css'));
 });
 

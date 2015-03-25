@@ -9,7 +9,9 @@ footer {
 #connect-footer-wrapper {
 	background: $black;
 	padding: 17px 0;
-	text-align: center;
+	@include breakpoint(small) {
+		text-align: center;
+	}
 	@include breakpoint(medium) {
 		height: 80px;
 		text-align: left;
@@ -26,9 +28,7 @@ footer {
 		}
 	}
 	.social-media {
-		@include breakpoint(medium) {
-			float: right;
-		}
+		float: right;
 		a {
 			color: $light-grey;
 		  display: inline-block;
@@ -114,6 +114,7 @@ footer #footer-top {
 		width: 55%;
 	}
 	#email-btn {
+		background: #c0c0c0;
 		border-radius: 2px;
 		border: none;
 		color: $blue;
