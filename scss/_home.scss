@@ -5,10 +5,6 @@
 
 .homeWrapper {
 	background: $white;
-	height: 1200px;
-	@include breakpoint(medium) {
-		height: auto;
-	}
 	.smart-city-header {
 		background: rgba(221,221,221,0.8);
 		padding: 10px 15px;
@@ -36,20 +32,23 @@
 // Page Wrapper 
 
 .homeWrapper {
+	background: #4C4C52;
 	position: relative;
 	padding: 0;
 	width: 100%;
+	@include breakpoint(medium) {
+		height: auto;
+	}
 }
 
 
 // Three Widget Area 
 
 .columnOuterWrapper {
-	position: absolute;
-	top: 150px;
 	width: 100%;
 	@include breakpoint(medium) {
 		bottom: 35px;
+		position: absolute;
 		top: auto;
 	}
 	.row {
@@ -82,25 +81,9 @@
 				}
 			}
 		}
-		&:first-child:hover {
-			.editable-text {
-				@include breakpoint(medium) {
-					font-size: 12px;
-					padding: 20px 15px;
-					height: 210px;
-				}
-				@include breakpoint(large) {
-					height: 168px;
-				}
-			}
-			a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
-				height: 50px;
-			}
-		}
 		a.learn-more,
 		a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
 			color: $white;
-			font-size: 0;
 			line-height: 50px;
 			transition: height 0.5s;
 			span {
@@ -110,6 +93,7 @@
 				color: $light-grey;
 			}
 			@include breakpoint(medium) {
+				font-size: 0;
 				height: 0;
 				padding: 0;
 				transition: height 0.5s;
@@ -125,7 +109,6 @@
 		background: $black;
 		color: #fff;
 		font-size: 12px;
-		padding: 0;
 		a {
 			color: #fff;
 			&:hover {
@@ -135,7 +118,14 @@
 		@include breakpoint(medium) {
 			font-size: 0;
 			height: 0;
+			padding: 0;
 			transition: height 0.5s, padding 0.5s;
+		}
+	}
+	.editable-text {
+		padding: 15px;
+		@include breakpoint(medium) {
+			padding: 0;
 		}
 	}
 	ul.news-list {
@@ -152,19 +142,46 @@
 
 // Web Part Hover
 
-.columnOuterWrapper .col-md-4:hover .editable-text, 
-.columnOuterWrapper .col-md-4:hover .learn-more,
-.columnOuterWrapper .col-md-4:hover .teaser-wrapper {
-	@include breakpoint(medium) {
-		display: block !important;
+	.columnOuterWrapper .col-md-4:hover .editable-text, 
+	.columnOuterWrapper .col-md-4:hover .learn-more,
+	.columnOuterWrapper .col-md-4:hover .teaser-wrapper {
+		@include breakpoint(medium) {
+			display: block !important;
+		}
+	}
+
+	.columnOuterWrapper .col-md-4:hover ul.news-list {
+		@include breakpoint(medium) {
+			display: block !important;
+			height: 260px;
+		}
+		@include breakpoint(large) {
+			height: auto;
+		}
+	}
+
+.col-md-4:first-child:hover {
+	.editable-text {
+		@include breakpoint(medium) {
+			font-size: 12px;
+			padding: 20px 15px;
+			height: 210px;
+		}
+		@include breakpoint(large) {
+			height: 168px;
+		}
+	}
+	a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsSmartCity_l1_Link_SmartCity_btnElem_hyperLink {
+		@include breakpoint(medium) {
+			height: 50px;
+		}
 	}
 }
 
-.columnOuterWrapper .col-md-4:hover ul.news-list {
-	display: block !important;
-	height: 260px;
-	@include breakpoint(large) {
-		height: auto;
+
+.homeWrapper .news-item ul.news-list {
+	li:hover {
+		@include blue-gradient;
 	}
 }
 
@@ -191,36 +208,33 @@ a#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzHero_ColumnsSmartCity_ColumnsS
 
 // News Widget
 .homeWrapper {
-.news-item {
-	a.link {
-		display: none;
+	.news-item {
+		a.link {
+			display: none;
+		}
 	}
-}
-
-ul.news-list {
-	padding: 0;
-	.mCSB_container {
-		padding: 0;
+	ul.news-list {
+		@include breakpoint(medium) {
+			padding: 0;
+		}
+		.mCSB_container {
+			padding: 0;
+		}
+		li {
+			padding: 20px 15px;
+			margin: 0;
+		}
+		li:nth-child(1) {
+			border-bottom: 2px dashed $white;
+		}
+		li:nth-child(n+3) {
+			display: none;
+		}
+		.title {
+			font-size: 16px;
+			font-weight: 700;
+		}
 	}
-	li {
-		padding: 20px 15px;
-		margin: 0;
-	}
-	li:hover {
-		@include blue-gradient;
-	}
-	li:nth-child(1) {
-		border-bottom: 2px dashed $white;
-	}
-	li:nth-child(n+3) {
-		display: none;
-	}
-	.title {
-		font-size: 16px;
-		font-weight: 700;
-	}
-}
-
 }
 
 
