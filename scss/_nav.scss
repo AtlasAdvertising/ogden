@@ -240,10 +240,15 @@ body {
 			width: auto; 
 			padding: 5px 10px; 
 			&:before {
-				content: "\f0c9";
-				font-family: "FontAwesome";
-				color: $white;
-				font-size: 28px;
+				content: "menu";
+			  color: #174658;
+			  font-size: 13px;
+			  background: #F9F9F8;
+			  height: 35px;
+			  width: 42px;
+			  display: inline-block;
+			  text-align: center;
+			  padding-top: 9px;
 			}
 			@include breakpoint(small) {
 
