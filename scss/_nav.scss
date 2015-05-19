@@ -1,279 +1,265 @@
 /* Nav */
 
-
 // Logo
-
 #logo img {
-	padding-top: 8px;
+    padding-top: 8px;
 }
-
 
 // Header
-
 header {
-	background: $blue;
-	height: 50px;
-	padding: 0;
+    background: $blue;
+    height: 50px;
+    padding: 0;
 }
-
 
 // Utility Nav
-
 #utility-nav-wrapper {
-	font-family: "Neue Helvetica W01";
-	text-align: right;
-	a {
-		color: $light-grey;
-		display: inline-block;
-		font-size: 13px;
-		padding: 10px;
-		&:hover {
-			background: transparent;
-			color: #fff;
-		}
-	}
-	#headerPhoneNum {
-		clear: none;
-		color: $light-grey;
-		display: inline-block;
-		float: none;
-		font-weight: bold;
-		a {
-			font-size: 20px;
-			padding: 10px 5px 10px 10px;
-		}
-	}
-	.OfficePhone {
-		display: inline-block;
-		margin-left: 10px;
-		padding-top: 13px;
-	}
+    font-family: "Neue Helvetica W01";
+    text-align: right;
+    a {
+        color: $light-grey;
+        display: inline-block;
+        font-size: 13px;
+        padding: 10px;
+        &:hover {
+            background: transparent;
+            color: #fff;
+        }
+    }
+    #headerPhoneNum {
+        clear: none;
+        color: $light-grey;
+        display: inline-block;
+        float: none;
+        font-weight: bold;
+        a {
+            font-size: 20px;
+            padding: 10px 5px 10px 10px;
+        }
+    }
+    .OfficePhone {
+        display: inline-block;
+        margin-left: 10px;
+        padding-top: 13px;
+    }
 }
 
 #utility-nav-wrapper {
-	.fa-search {
-		color: $light-grey;
-		cursor: pointer;
-	  font-size: 20px !important;
-	  position: relative;
-	  top: 1px;
-		&:hover {
-			color: #fff;
-		}
-	}
+    .fa-search {
+        color: $light-grey;
+        cursor: pointer;
+        font-size: 20px !important;
+        position: relative;
+        top: 1px;
+        &:hover {
+            color: #fff;
+        }
+    }
 }
 
 #utilityNav {
-	padding-top: 4px;
-	vertical-align: top;
+    padding-top: 4px;
+    vertical-align: top;
+    a {
+        background: transparent;
+        
+    }
 }
 
 #utilityNav,
 .social-media,
 #utilityNav li,
 .social-media li,
- {
-	display: inline-block;
-	float: none;
+{
+    display: inline-block;
+    float: none;
 }
 
 .social-media {
-	font-size: 20px;
-	padding: 5px 0 0 25px;
-	padding-top: 5px;
-	padding-left: 0;
-	li:first-child {
-		padding-left: 0;
-	}
-	li:nth-child(2) a i:before {
-		content: "\f16e";
-	}
+    font-size: 20px;
+    padding: 5px 0 0 25px;
+    padding-top: 5px;
+    padding-left: 0;
+    li:first-child {
+        padding-left: 0;
+    }
 }
 
 #utility-nav-wrapper .social-media a {
-	font-size: 20px;
-	padding: 0 5px 10px;
+    font-size: 20px;
+    padding: 0 5px 10px;
+    background: transparent;
 }
-
 
 // Main Nav
-
 nav {
-	-webkit-align-items: center;
-	align-items: center;
-	background: rgba(255,255,255,0.8);
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: -webkit-flex;
-	display: flex;
-	font-size: 14px;
-	height: 50px;
-	-webkit-justify-content: center;
-	justify-content: center;
-	margin: 10px 5% 0;
-	position: absolute;
-	width: 90%;
-	z-index: 1005;
-	@include breakpoint(large) {
-		font-size: 15px;
-	}
-	@media (min-width: 1650px) {
-		margin: 10px 15% 0;
-		width: 70%;
-	}
-	ul {
-		@include list;
-	}
-	#menuElem {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		overflow: visible;
-		width: 100%;
-		@include breakpoint(large) {
-		}
-		> li { 
-			-webkit-flex-grow: 1;
-			flex-grow: 1;
-			float: none;
-			position: relative;
-			text-align: center;
-			@include breakpoint(large) {
-			}
-			&:nth-last-child(1) ul {
-				right: 0;
-			}
-			a {
-				// @include link-hover;
-				// color: #fff;
-				// @include breakpoint(large) {
-				// 	padding: 10px 20px;
-				// }
-			}
-			&:hover {
-				> ul {
-					display: block;
-				}
-			}
-			ul {
-				background: $black;
-				display: none;
-				position: absolute;
-				top: 35px;
-				width: 240px;
-				z-index: 1005;
-				li {
-					border: none;
-					position: relative;
-					text-align: left;
-					width: 100%;
-					&:hover {
-						> ul {
-							display: block;
-						}
-					}
-					ul {
-						border: none;
-						position: absolute;
-						left: 100%;
-						top: 0;
-					}
-					a {
-						color: #fff;
-						display: inline-block;
-						padding: 5px 10px;
-						width: 100%;
-						&:hover {
-							@include blue-gradient;
-						}
-					}
-				}
-			}
-		}
-		> li > a {
-			color: $black;
-			display: inline;
-			font-family:'Neue Helvetica W01';
-			font-size: 15px;
-			font-weight: 600;
-			max-width: 130px;
-			padding: 15px 0;
-			position: relative;
-			text-align: center;
-		}
-		> li.HighLighted > a {
-		  background: #fff;
-		  padding-left: 20px;
-		  padding-right: 20px;
-		  z-index: 100;
-	    bottom: -1px;
-      border: 2px solid #EEE;
-      border-bottom: none;
-		}
-	}
+    -webkit-align-items: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 14px;
+    height: 50px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 10px 5% 0;
+    position: absolute;
+    width: 90%;
+    z-index: 1005;
+    @include breakpoint(large) {
+        font-size: 15px;
+    }
+    @media (min-width: 1650px) {
+        margin: 10px 15% 0;
+        width: 70%;
+    }
+    ul {
+        @include list;
+    }
+    #menuElem {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        overflow: visible;
+        width: 100%;
+        @include breakpoint(large) {}
+        > li {
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            float: none;
+            position: relative;
+            text-align: center;
+            @include breakpoint(large) {}
+            &:nth-last-child(1) ul {
+                right: 0;
+            }
+            a {
+                // @include link-hover;
+                // color: #fff;
+                // @include breakpoint(large) {
+                // 	padding: 10px 20px;
+                // }
+            }
+            &:hover {
+                > ul {
+                    display: block;
+                }
+            }
+            ul {
+                background: $black;
+                display: none;
+                position: absolute;
+                top: 35px;
+                width: 240px;
+                z-index: 1005;
+                li {
+                    border: none;
+                    position: relative;
+                    text-align: left;
+                    width: 100%;
+                    &:hover {
+                        > ul {
+                            display: block;
+                        }
+                    }
+                    ul {
+                        border: none;
+                        position: absolute;
+                        left: 100%;
+                        top: 0;
+                    }
+                    a {
+                        color: #fff;
+                        display: inline-block;
+                        padding: 5px 10px;
+                        width: 100%;
+                        &:hover {
+                            @include blue-gradient;
+                        }
+                    }
+                }
+            }
+        }
+        > li > a {
+            color: $black;
+            display: inline;
+            font-family: 'Neue Helvetica W01';
+            font-size: 15px;
+            font-weight: 600;
+            max-width: 130px;
+            padding: 15px 0;
+            position: relative;
+            text-align: center;
+        }
+        > li.HighLighted > a {
+            background: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            z-index: 100;
+            bottom: -1px;
+            border: 2px solid #EEE;
+            border-bottom: none;
+        }
+    }
 }
-
 
 // Main Nav for Secondary Pages
-
-#main-navigation.secondary {
-	position: static;
-}
-
+/*#main-navigation.secondary {
+    position: static;
+}*/
 
 // Mobile Menu and Button
-
 body {
-.MobileMenu {
-		.MobileMenuPlaceholder {
-			display: none;
-		}
-		.MobileMenuButton {
-			top: 2px; 
-			right: 5px;
-			background: none; 
-			font-size: 36px; 
-			height: auto; 
-			width: auto; 
-			padding: 5px 10px; 
-			&:before {
-				content: "menu";
-			  color: #174658;
-			  font-size: 13px;
-			  background: #F9F9F8;
-			  height: 35px;
-			  width: 42px;
-			  display: inline-block;
-			  text-align: center;
-			  padding-top: 9px;
-			}
-			@include breakpoint(small) {
-
-			}
-			@include breakpoint(medium) {
-				display: none;
-			}
-		}
-	}
-	.MobileMenuWrapper {
-		#searchbtn-mobile {
-			height: 28px;
-		}
-		.mobile-list {
-			margin: 0; 
-			padding: 10px 0 0 0; 
-			list-style: none; 
-			border-top: 1px solid rgba(0,0,0,0.25);
-			li {
-				display: inline-block; 
-				padding: 5px;
-				a {
-					padding: 5px;
-				}
-			}
-		}
-	}
+    .MobileMenu {
+        .MobileMenuPlaceholder {
+            display: none;
+        }
+        .MobileMenuButton {
+            top: 2px;
+            right: 5px;
+            background: none;
+            font-size: 36px;
+            height: auto;
+            width: auto;
+            padding: 5px 10px;
+            &:before {
+                content: "menu";
+                color: #174658;
+                font-size: 13px;
+                background: #F9F9F8;
+                height: 35px;
+                width: 42px;
+                display: inline-block;
+                text-align: center;
+                padding-top: 9px;
+            }
+            @include breakpoint(small) {}
+            @include breakpoint(medium) {
+                display: none;
+            }
+        }
+    }
+    .MobileMenuWrapper {
+        #searchbtn-mobile {
+            height: 28px;
+        }
+        .mobile-list {
+            margin: 0;
+            padding: 10px 0 0 0;
+            list-style: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.25);
+            li {
+                display: inline-block;
+                padding: 5px;
+                a {
+                    padding: 5px;
+                }
+            }
+        }
+    }
 }

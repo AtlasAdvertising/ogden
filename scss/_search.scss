@@ -1,100 +1,111 @@
 /* Search */
 
-.search-bar {
-	display: none;
+.searchWrapper {
+    background: #fff;
 }
 
+.SearchDialog {
+    margin-top: 25px;
+    background: #F2F2F2;
+    padding: 10px;
+}
+
+.SearchResults{
+    margin-bottom:50px;
+}
+
+.search-bar {
+    display: none;
+}
 
 // Hidden Search Area
-
 .search-bar {
-	display: none;
-	background-color: $grey; 
-	height: 40px; 
-	padding: 9px 0; 
-	margin-top: -40px;
-	input#searchbtn { 
-		background: url('/Leduc/images/search.png') no-repeat center center; 
-		outline: 0; 
-		border: none; 
-		width: 22px; 
-		height: 22px; 
-		float: left; 
-		margin-right: 10px; 
-		display: inline-block; 
-	}
-	input#search { 
-		float: left; 
-		outline: none; 
-		border: 0; 
-		background-color: transparent; 
-		color: #fff;
-	}
-	input#search::-webkit-input-placeholder {
-	   color: #fff;
-	   font-family:'Neue Helvetica W01';
-	   font-size: 15px;
-	   text-transform: uppercase;
-	}
-
-	input#search:-moz-placeholder { /* Firefox 18- */
-	   color: #fff;
-	   font-family:'Neue Helvetica W01';
-	   font-size: 15px;
-	   text-transform: uppercase;  
-	}
-
-	input#search::-moz-placeholder {  /* Firefox 19+ */
-	   color: #fff;
-	   font-family:'Neue Helvetica W01';
-	   font-size: 15px;
-	   text-transform: uppercase;  
-	}
-
-	input#search:-ms-input-placeholder {  
-	   color: #fff;
-	   font-family:'Neue Helvetica W01';
-	   font-size: 15px;
-	   text-transform: uppercase;  
-	}
-	.search-close { 
-		float: right; 
-		height: 22px; 
-		cursor: pointer; 
-	}
+    display: none;
+    background-color: $grey;
+    height: 40px;
+    padding: 9px 0;
+    margin-top: -40px;
+    input#searchbtn {
+        background: url('/Leduc/images/search.png') no-repeat center center;
+        outline: 0;
+        border: none;
+        width: 22px !important;
+        height: 22px;
+        float: left;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    input#search {
+        float: left;
+        outline: none;
+        border: 0;
+        background-color: transparent;
+        color: #fff;
+    }
+    input#search::-webkit-input-placeholder {
+        color: #fff;
+        font-family: 'Neue Helvetica W01';
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    input#search:-moz-placeholder {
+        /* Firefox 18- */
+        
+        color: #fff;
+        font-family: 'Neue Helvetica W01';
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    input#search::-moz-placeholder {
+        /* Firefox 19+ */
+        
+        color: #fff;
+        font-family: 'Neue Helvetica W01';
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    input#search:-ms-input-placeholder {
+        color: #fff;
+        font-family: 'Neue Helvetica W01';
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .search-close {
+        float: right;
+        height: 22px;
+        cursor: pointer;
+    }
 }
 
-
 // Search Results
-
 .SearchResults {
-  margin-top: 35px;
+    margin-top: 35px;
 }
 
 input#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_btnSearch {
-  background: #c0c0c0;
-  border-radius: 2px;
-  border: none;
-  color: #174658;
-  display: block;
-  font-family: 'RamaGothicE-Regular';
-  font-size: 19px;
-  font-weight: 600;
-  margin: 10px 0 15px;
-  max-width: 100%;
-  padding: 2px 0;
-  width: 150px;
-  &:hover {
-  	background: #174658;
-	  color: #F9F9F8;
-  }
+    background: #c0c0c0;
+    border-radius: 2px;
+    border: none;
+    color: #174658;
+    display: block;
+    font-family: 'RamaGothicE-Regular';
+    font-size: 19px;
+    font-weight: 600;
+    margin: 10px 0 15px;
+    max-width: 100%;
+    padding: 2px 0;
+    width: 150px;
+    &:hover {
+        background: #174658;
+        color: #F9F9F8;
+    }
 }
 
 select#p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_drpSearchMode {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 #p_lt_wpzPagePlaceholder_pageplaceholder_p_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_pnlDialog td {
-  height: 35px;
+    height: 35px;
 }

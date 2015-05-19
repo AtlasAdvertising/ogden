@@ -1,28 +1,47 @@
 /* Media */
 
-
 // Show More/Less Buttons 
 .show-more.button,
 .show-less.button {
-	cursor: pointer;
-	background: $blue;
-	display: inline-block;
-	margin: 10px 0;
-	border: 0;
-	padding: 8px 20px;
-	text-transform: uppercase;
-	font-family:'Neue Helvetica W01';
-	font-size: 15px;
-	font-weight: 900;
-	color: white;
-	&:hover {
-		color: $grey;
-	}
+    cursor: pointer;
+    background: $blue;
+    display: inline-block;
+    margin: 10px 0;
+    border: 0;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-family: 'Neue Helvetica W01';
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    &:hover {
+        color: $grey;
+    }
 }
 
 .webpart-title {
-	font-family: 'RamaGothicE-Regular';
-	font-size: 28px;
-	font-weight: 600;
-	padding: 0 0 25px;	
+    font-family: 'RamaGothicE-Regular';
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0 0 25px;
+}
+
+.media-wrapper {
+    background: #fff;
+    padding-bottom: 80px;
+}
+
+.flickrWrapper a {
+    background: #2b2b2d;
+    padding: 15px;
+    margin-bottom: 30px;
+    color: #fff !important;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 10px;
+    &:hover{
+        background:#264856;
+    }
 }

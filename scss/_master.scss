@@ -1,10 +1,12 @@
 /* Master */
 
+#form {
+    background: #f9f9f8;
+}
 
 // Links
-
 a {
-	&:hover {
-		text-decoration: none;
-	}
+    &:hover {
+        text-decoration: none;
+    }
 }

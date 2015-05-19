@@ -1,232 +1,220 @@
 /* Footer */
 
 footer {
-  position: relative;
+    position: relative;
 }
 
 // Connect With...
-
 #connect-footer-wrapper {
-	background: $black;
-	padding: 17px 0;
-	@include breakpoint(small) {
-		text-align: center;
-	}
-	@include breakpoint(medium) {
-		height: 80px;
-		text-align: left;
-	}
-	#connect-footer-header {
-		color: $white;
-		display: inline-block;
-		font-family: 'RamaGothicE-Regular';
-		font-size: 33px;
-		&:before {
-			content: "\f0da";
-			font-family: 'FontAwesome';
-			padding-right: 15px;
-		}
-	}
-	.social-media {
-		float: right;
-		a {
-			color: $light-grey;
-		  display: inline-block;
-		  font-size: 26px;
-		  margin-right: 10px;
-		  padding-top: 10px;
-			&:hover {
-				background: transparent;
-				color: #fff;
-			}
-		}
-	}
+    background: $black;
+    padding: 17px 0;
+    @include breakpoint(small) {
+        text-align: center;
+    }
+    @include breakpoint(medium) {
+        height: 80px;
+        text-align: left;
+    }
+    #connect-footer-header {
+        color: $white;
+        display: inline-block;
+        font-family: 'RamaGothicE-Regular';
+        font-size: 33px;
+        &:before {
+            content: "\f0da";
+            font-family: 'FontAwesome';
+            padding-right: 15px;
+        }
+    }
+    .social-media {
+        float: right;
+        a {
+            color: $light-grey;
+            display: inline-block;
+            font-size: 26px;
+            padding: 5px 5px 10px !important;
+            background: transparent;
+            &:hover {
+                background: transparent;
+                color: #fff;
+            }
+        }
+    }
 }
-
-
 
 // Footer Top
-
 #footer-top {
-	background: $white;
-	padding: 25px 0;
-	@include breakpoint(medium) {
-		height: 135px;
-	}
-	#footer-top-inner-wrapper {
-		@include breakpoint(medium) {
-			align-items: flex-start;
-			display: flex;
-			height: 76px;
-		}
-	}
+    background: $white;
+    padding: 25px 0;
+    @include breakpoint(medium) {
+        height: 135px;
+    }
+    #footer-top-inner-wrapper {
+        @include breakpoint(medium) {
+            align-items: flex-start;
+            display: flex;
+            height: 76px;
+        }
+    }
 }
-
 
 // Footer Office Info
-
 footer #footer-top {
-#footerOffice {
-	color: $black;
-	font-family:'Neue Helvetica W01';
-	margin-bottom: 20px;
-	@include breakpoint(medium) {
-		margin-bottom: 0;
-	}
-	.OfficeName,
-	.OfficePhone {
-		font-family: 'Neue Helvetica W01';
-		font-size: 14px;
-		font-weight: 600;
-	}
-	.OfficeName {
-		padding-bottom: 5px;
-	}
-	.OfficeAddress,
-	.OfficeEmail {
-		font-size: 13px;
-	}
-	a.OfficeEmail {
-		color: $black;
-		&:hover {
-			color: $blue;
-		}
-	}
+    #footerOffice {
+        color: $black;
+        font-family: 'Neue Helvetica W01';
+        margin-bottom: 20px;
+        @include breakpoint(medium) {
+            margin-bottom: 0;
+        }
+        .OfficeName,
+        .OfficePhone {
+            font-family: 'Neue Helvetica W01';
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .OfficeName {
+            padding-bottom: 5px;
+        }
+        .OfficeAddress,
+        .OfficeEmail {
+            font-size: 13px;
+        }
+        a.OfficeEmail {
+            color: $black;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
 }
-}
-
 
 // Footer Office
-
 #email-signup-header {
-	color: $black;
-	font-family:'Neue Helvetica W01';
-	font-weight: 600;
-	padding-bottom: 5px;
+    color: $black;
+    font-family: 'Neue Helvetica W01';
+    font-weight: 600;
+    padding-bottom: 5px;
 }
 
 #email-signup-form {
-	#email {
-		border: 1px solid #BDBDBD;
-		border-radius: 4px;
-		padding: 3px 10px;
-		box-shadow: inset 1px 1px 2px 0px #ccc;
-		width: 55%;
-	}
-	#email-btn {
-		background: #c0c0c0;
-		border-radius: 2px;
-		border: none;
-		color: $blue;
-		display: block;
-		font-family: 'RamaGothicE-Regular';
-		font-size: 19px;
-		font-weight: 600;
-		margin: 10px 0 15px;
-		max-width: 100%;
-		padding: 2px 0;
-		width: 150px;
-		@include breakpoint(medium) {
-			display: inline-block;
-			margin-left: 3%;
-			width: 32%;
-		}
-		&:hover {
-			background: $blue;
-			color: $white;
-		}
-	}
+    #email {
+        border: 1px solid #BDBDBD;
+        border-radius: 4px;
+        padding: 3px 10px;
+        box-shadow: inset 1px 1px 2px 0px #ccc;
+        width: 55%;
+    }
+    #email-btn {
+        background: #E2E2E2;
+        border-radius: 2px;
+        border: none;
+        color: $blue;
+        display: block;
+        font-family: 'RamaGothicE-Regular';
+        font-size: 19px;
+        font-weight: 600;
+        margin: 10px 0 15px;
+        max-width: 100%;
+        padding: 1px 0;
+        width: 150px !important;
+        @include breakpoint(medium) {
+            display: inline-block;
+            margin-left: 3%;
+            width: 32%;
+        }
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
+    }
 }
-
 
 // Copyright
-
 #copyright {
-	color: $black;
-	font-family:'Neue Helvetica W01';
-	font-size: 13px;
-	@include breakpoint(medium) {
-		text-align: right;
-	}
-	a {
-	color: $black;
-		&:hover {
-			color: $blue;
-		}
-	}
+    color: $black;
+    font-family: 'Neue Helvetica W01';
+    font-size: 13px;
+    @include breakpoint(medium) {
+        text-align: right;
+    }
+    a {
+        color: $black;
+        &:hover {
+            color: $blue;
+        }
+    }
 }
 
-
 // Site Map
-
 #site-map-link {
-	color: $blue;
-	cursor: pointer;
-	font-weight: 600;
+    color: $blue;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 #footer-bottom {
-	background: #3F4042;
-	display: none; 
+    background: #3F4042;
+    display: none;
 }
 
 #sitemap {
-	margin: 45px 0 30px;
-	.CMSSiteMapList .CMSSiteMapListItem .CMSSiteMapList {
-		display: block;
-	}
-	ul {
-		list-style: none; 
-		margin: 0 auto; 
-		padding: 0; 
-		text-align: left;
-		width: 90%;
-		li {
-			float: left;
-			margin: 0 5% 0 0;
-			width: 12%;
-			&:last-child {
-				margin-right: 0;
-			}
-			a {
-				color: $white;
-				font-family: 'RamaGothicE-Regular';
-				font-size: 20px; 
-				font-weight: 600;
-				&:hover {
-					color: $light-grey; 
-				}
-			}
-		}
-	}
+    margin: 45px 0 30px;
+    .CMSSiteMapList .CMSSiteMapListItem .CMSSiteMapList {
+        display: block;
+    }
+    ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+        width: 90%;
+        li {
+            float: left;
+            margin: 0 5% 0 0;
+            width: 12%;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $white;
+                font-family: 'RamaGothicE-Regular';
+                font-size: 20px;
+                font-weight: 600;
+                &:hover {
+                    color: $light-grey;
+                }
+            }
+        }
+    }
 }
 
 #sitemap ul li ul {
-	padding-top: 5px;
-	width: auto;
-	li {
-		float: none; 
-		width: 100%; 
-		a {
-			display: inline-block;
-			font-family:'Neue Helvetica W01';
-			font-size: 12px;
-			font-weight: 400;
-			padding: 5px 0;
-			text-transform: none;
-			&:hover {
-				color: $light-grey;
-			}
-		}
-	}
+    padding-top: 5px;
+    width: auto;
+    li {
+        float: none;
+        width: 100%;
+        a {
+            display: inline-block;
+            font-family: 'Neue Helvetica W01';
+            font-size: 12px;
+            font-weight: 400;
+            padding: 5px 0;
+            text-transform: none;
+            &:hover {
+                color: $light-grey;
+            }
+        }
+    }
 }
 
 #footerButtonClose {
-	background: url("/ogden/images/site-map-x.png");
-	cursor: pointer;
-	display: inline-block;
-	height: 36px;
-	position: absolute;
-	right: 25px;
-	width: 36px;
+    background: url("/ogden/images/site-map-x.png");
+    cursor: pointer;
+    display: inline-block;
+    height: 36px;
+    position: absolute;
+    right: 25px;
+    width: 36px;
 }

@@ -1,136 +1,141 @@
 /* Secondary */
 
 #secondaryWrapper {
-	box-shadow: 0px 1px 4px #585858;
-	min-height: 0;
-	padding: 25px 0 0;
-	position: relative;
-	a {
-		color: $link-blue;
-		&:hover {
-			color: $hover-blue;
-		}
-	}
+    box-shadow: 0px 1px 4px #585858;
+    min-height: 0;
+    padding: 0 !important;
+    position: relative;
+    background: #264856;
+    a {
+        color: $link-blue;
+        &:hover {
+            color: $hover-blue;
+        }
+    }
 }
 
 #secondaryHeaderImage {
-	position: relative;
-	width: 100%;
-	img {
+    position: relative;
     width: 100%;
-	}
+    padding: 0px;
+    background: #264856;
+    max-height: 300px;
+    min-height: 60px;
+    img {
+        width: 100%;
+    }
 }
 
+.nav-Image {
+    margin-bottom: -60px;
+}
+/*
 #secondaryWrapper:not(.no-side-nav):before {
-	@include breakpoint(medium) {
-	  content: " ";
-	  height: 100%;
-	  background: #264856;
-	  position: absolute;
-	  left: 0;
-	  top: 26px;
-	  width: 500px;
-	}
-  @include breakpoint(large) {
-	  width: 1000px;
-	}
+    @include breakpoint(medium) {
+        content: " ";
+        height: 100%;
+        background: #264856;
+        position: absolute;
+        left: 0;
+        top: 26px;
+        width: 500px;
+    }
+    @include breakpoint(large) {
+        width: 1000px;
+    }
 }
-
-
+*/
 
 .with-header-image + div#secondaryWrapper {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 .with-header-image {
-	#menuElem li.HighLighted>a {
-		bottom: auto;
-		border: none;
-	}
+    #menuElem li.HighLighted>a {
+        bottom: auto;
+        border: none;
+    }
 }
 
-#secondaryContent {
-}
+#secondaryContent {}
 
 #secondaryMainContent {
-	min-height: 600px;
-	padding-top: 45px;
+    min-height: 600px;
+    padding-top: 45px;
 }
 
 #secondary-content-widgets-wrapper {
-	background: #fff;
-	overflow: hidden;
+    background: #fff;
+    overflow: hidden;
 }
 
 #sideNavigation {
-	background: $header-blue;
-	color: $white;
-	padding-top: 25px;
-	a {
-		color: $white;
-	}
-	.SectionHeaderRepeater {
-		color: #fff;
-		font-family: 'RamaGothicE-Regular';
-		font-size: 28px;
-		font-weight: 600;
-		padding: 5px 15px;
-	}
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		li {
-			a {
-				color: #fff;
-				display: inline-block;
-				font-family:'Neue Helvetica W01';
-				font-size: 11px;
-				font-weight: 600;
-				padding: 2px 15px;
-				width: 100%;
-				&:hover {
-					background: #fff;
-					color: $header-blue;
-				}
-			}
-			ul {
-				display: none;
-			}
-		}
-	}
-	li.HighLighted a {
-		background: #fff;
-		color: #264856;
-	}
-	li.HighLighted ul {
-		display: block;
-		margin-left: 15px;
-		a {
-			background: none;
-			color: #fff;
-			&:hover {
-				color: $light-grey;
-			}
-		}
-	}
-	li.HighLighted li.HighLighted:before {
-		content: "\f105";
-		font-family: FontAwesome;
-		font-size: 11px;
-		left: 6px;
-		position: absolute;
-		top: 3px;
-	}
+    background: $header-blue;
+    color: $white;
+    padding-top: 25px;
+    a {
+        color: $white;
+    }
+    .SectionHeaderRepeater {
+        color: #fff;
+        font-family: 'RamaGothicE-Regular';
+        font-size: 28px;
+        font-weight: 600;
+        padding: 5px 15px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                color: #fff;
+                display: inline-block;
+                font-family: 'Neue Helvetica W01';
+                font-size: 11px;
+                font-weight: 600;
+                padding: 2px 15px;
+                width: 100%;
+                &:hover {
+                    background: #fff;
+                    color: $header-blue;
+                }
+            }
+            ul {
+                display: none;
+            }
+        }
+    }
+    li.HighLighted a {
+        background: #fff;
+        color: #264856;
+    }
+    li.HighLighted ul {
+        display: block;
+        margin-left: 15px;
+        a {
+            background: none;
+            color: #fff;
+            &:hover {
+                color: $light-grey;
+            }
+        }
+    }
+    li.HighLighted li.HighLighted:before {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-size: 11px;
+        left: 6px;
+        position: absolute;
+        top: 3px;
+    }
 }
 
-
 // Headers
-
 h1 {
-  font-family: 'RamaGothicE-Regular';
-  font-size: 42px;
-  font-weight: 600;
+    font-family: 'RamaGothicE-Regular';
+    font-size: 42px;
+    font-weight: 600;
 }
 
 h2,
@@ -138,64 +143,66 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:'Neue Helvetica W01';
-}
-h2 {
-	font-size: 24px;
-}
-h3 {
-	font-size: 22px;
-}
-h4 {
-	font-size: 18px;
-}
-h6 {
-	font-size: 16px;
+    font-family: 'Neue Helvetica W01';
 }
 
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
 
 // My Fav's
-
 .PageUtility {
-	position: absolute !important;
-	right: -40px;
-	top: 22px;
-	.PageUtility_Wrapper {
-		width: 350px;
-	}
-	#Utility_MyFavorites, 
-	#Utility_AddPage, 
-	#Utility_Print,
-	#Utility_Share {
-		border: none !important;
-		color: #666;
-		font-family:'Neue Helvetica W01';
-		padding: 7px 2px 8px 1px;
-		&:hover {
-			color: $black;
-			text-decoration: none;
-		}
-		&:after {
-			content: "::";
-			padding: 0 5px;
-		}
-		.ImgBg {
-			visibility: hidden;
-		}
-		a {
-			color: #666;
-			&:hover {
-				color: $black;
-				text-decoration: none;
-			}
-		}
-	}
-	#Utility_Share:after {
-		content: "";
-	}
-	.PageUtility_Dropdown { 
-		-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
-		-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
-		box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
-	}
+    position: absolute !important;
+    right: -40px;
+    top: 22px;
+    .PageUtility_Wrapper {
+        width: 350px;
+    }
+    #Utility_MyFavorites,
+    #Utility_AddPage,
+    #Utility_Print,
+    #Utility_Share {
+        border: none !important;
+        color: #666;
+        font-family: 'Neue Helvetica W01';
+        padding: 7px 2px 8px 1px;
+        &:hover {
+            color: $black;
+            text-decoration: none;
+        }
+        &:after {
+            content: "::";
+            padding: 0 5px;
+        }
+        .ImgBg {
+            visibility: hidden;
+        }
+        a {
+            color: #666;
+            &:hover {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+    #Utility_Share:after {
+        content: "";
+    }
+    .PageUtility_Dropdown {
+        -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.64);
+        -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.64);
+        box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.64);
+    }
 }
