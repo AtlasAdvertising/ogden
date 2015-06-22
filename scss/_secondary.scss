@@ -12,6 +12,10 @@
             color: $hover-blue;
         }
     }
+    img{
+        max-width:100%;
+        height:auto !important;
+    }
 }
 
 #secondaryHeaderImage {
@@ -21,6 +25,7 @@
     background: #264856;
     max-height: 300px;
     min-height: 60px;
+      height: auto !important;
     img {
         width: 100%;
     }
